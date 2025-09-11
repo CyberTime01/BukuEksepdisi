@@ -1,0 +1,70 @@
+@import "bootstrap";
+
+/* Custom styles for Register Ekspedisi */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.signature-pad {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.signature-pad canvas {
+    border-radius: 4px;
+}
+
+.btn-clear-signature {
+    margin-top: 10px;
+}
+
+.table-responsive {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.signature-display {
+    max-width: 200px;
+    max-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.search-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.export-buttons {
+    margin-bottom: 20px;
+}
+
+.pagination-info {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+
+    .signature-pad {
+        width: 100%;
+        height: 200px;
+    }
+}
