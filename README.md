@@ -21,6 +21,71 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Deployment to Railway
+
+This application is configured for deployment to Railway with MySQL database.
+
+### Steps to Deploy:
+
+1. **Push to GitHub:**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/your-repo.git
+   git push -u origin main
+   ```
+
+2. **Deploy to Railway:**
+   - Go to [railway.app](https://railway.app)
+   - Sign up/Login with GitHub
+   - Click "New Project" → "Deploy from GitHub repo"
+   - Select your repository
+   - Railway will auto-detect Laravel and deploy
+
+3. **Add MySQL Database:**
+   - In Railway dashboard, click "New" → "Database" → "MySQL"
+   - Copy the connection details
+
+4. **Set Environment Variables:**
+   In Railway project settings, add these variables:
+   ```
+   APP_KEY=base64:YOUR_GENERATED_KEY
+   APP_ENV=production
+   APP_DEBUG=false
+   APP_URL=https://your-app-name.up.railway.app
+   
+   DB_CONNECTION=mysql
+   DB_HOST=your-mysql-host
+   DB_PORT=3306
+   DB_DATABASE=railway
+   DB_USERNAME=root
+   DB_PASSWORD=your-mysql-password
+   ```
+
+5. **Generate APP_KEY:**
+   ```bash
+   php artisan key:generate --show
+   ```
+
+6. **Run Migrations:**
+   Railway will automatically run migrations on deploy.
+
+### Alternative Free Options:
+
+1. **PlanetScale (Free MySQL) + Vercel:**
+   - PlanetScale: Free MySQL database
+   - Vercel: Free hosting for Laravel
+
+2. **Supabase (Free PostgreSQL) + Railway:**
+   - Supabase: Free PostgreSQL database
+   - Railway: Free hosting
+
+3. **FreeSQLDatabase.com + Railway:**
+   - Free MySQL hosting
+   - Railway for app hosting
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
